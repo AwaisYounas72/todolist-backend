@@ -1,6 +1,17 @@
 import Todo from "../models/todoModel.js";
 
 
+export const GetTodo = async (req, res) => {
+    try {
+        const todo = await Todo.find()
+
+        return res.status(201).json({ result: todo })
+
+    } catch (error) {
+        return res.status(500).json("Something went wrong")
+    }
+}
+
 export const AddTodo = async (req, res) => {
     try {
         const { title } = req.body;
