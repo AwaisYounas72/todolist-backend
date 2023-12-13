@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin:"https://todolist-mzx4.vercel.app",
+    origin:"https://week3-day6-frontend-backend.vercel.app/",
     methods:["POST","GET","DELETE","PUT"],
     credentials:true
 }))
